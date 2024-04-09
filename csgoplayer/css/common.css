@@ -1,0 +1,184 @@
+/* 各个页面相同的样式表：头、尾部 */
+
+/* 版心 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 快捷导航 */
+.shortcut {
+    height: 52px;
+    background-color: #333;
+}
+
+.shortcut .wrapper {
+    height: 52px;
+    /* background-color: pink; */
+}
+
+.shortcut .wrapper ul {
+    float: right;
+}
+
+.shortcut .wrapper li {
+    float: left;
+    line-height: 52px;
+}
+
+.shortcut .wrapper ul li a {
+
+    padding: 0 16px;
+    border-right: 1px solid #666;
+    font-size: 14px;
+    color: #dcdcdc;;
+}
+
+.shortcut .wrapper ul li a:hover {
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b;
+}
+
+.shortcut .wrapper span {
+    display: inline-block;
+    /* background-color: pink; */
+    background-image: url(../csgopicture/csgotubiao.jpg);
+    height: 52px;
+    width: 93px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header {
+    margin: 30px auto;
+    height: 70px;
+    
+}
+
+.logo {
+    float: left;
+    width: 207px;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+/* logo搜索引擎优化做法 */
+.logo h1 {
+    width: 207px;
+    height: 70px;
+}
+
+.logo h1 a {
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../csgopicture/Logo-CSGO.png);
+    background-repeat: no-repeat;
+    background-size:contain;
+    font-size: 0;
+}
+
+.nav {
+    float: left;
+    margin-left: 40px;
+    height: 70px;
+    /* background-color: pink; */
+}
+
+.nav li {
+    float: left;
+    margin-right: 48px;
+    line-height: 70px;
+}
+
+.nav li a {
+    padding-bottom: 7px;
+}
+
+.nav li a:hover {
+    color: #27ba9b;
+    border-bottom: 1px solid #27ba9b;
+}
+
+.search {
+    position: relative;
+    float: left;
+    margin-top: 24px;
+    margin-left: 34px;
+    width: 172px;
+    height: 30px;
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.search input {
+    padding-left: 45px;
+    width: 172px;
+    height: 28px;
+}
+
+.search input::placeholder {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.search span {
+    position: absolute;
+    left: 0;
+    top:0;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    /* background-color: pink; */
+    background-image: url(../csgopicture/sprites.png);
+    
+    background-position: -160px -140px;
+}
+
+.car {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    width: 46px;
+    height: 46px;
+    /* background-color: skyblue; */
+    background-image: url(../csgopicture/sprites.png);
+    background-position: -239px -139px;
+}
+
+.car span {
+    position: absolute;
+    right: -13px;
+    top: -6px;
+    width: 20px;
+    height: 15px;
+    background-color: #e26237;
+    border-right:8px;
+
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    line-height: 15px;
+}
+
+/* 版权footer */
+.footer {
+    height: 160px;
+    background-color: #333;
+}
+
+.footer .bottem {
+    padding-top: 40px;
+    font-size:14px;
+    color: #999;
+    text-align: center;
+}
+
+.footer .bottem a{
+    font-size:14px;
+    color: #999;
+   
+}
+
+.footer .bottem p {
+    margin-bottom: 20px;
+}

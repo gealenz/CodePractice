@@ -1,0 +1,295 @@
+/* 放index页面的样式表 */
+.banner {
+    position: relative;
+    height: 500px;
+    background-color: #f5f5f5;
+    /* background-color: pink; */
+}
+
+.banner .wrapper {
+    position: relative;
+    height: 500px;
+    width: 1600px;
+    /* background-color: skyblue; */
+}
+
+.banner .wrapper .picture{
+    display: inline-block;
+    /* background-color: pink; */
+    background-image: url(../csgopicture/1516787302_212157.jpg);
+    height: 500px;
+    width: 1600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.banner .zhou {
+   position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    background-image: url(../csgopicture/bb828fb462746c34f3604cd23733fdd.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 侧导航 */
+.banner .aside {
+    position: absolute;
+    left: 155px;
+    top: 0;
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.banner .aside li {
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .aside a {
+    position: relative;
+    /* 宽度和父级是一样的 */
+    display: block;
+    padding-left: 36px;
+    padding-right: 19px;
+    height: 50px;
+    
+    color: #fff;
+}
+
+.banner .aside a span {
+    margin-left: 15px;
+    font-size: 14px;
+
+}
+
+.banner .aside a:hover {
+    background-color: #27ba9b;
+}
+
+.banner .aside a ::after {
+    position: absolute;
+    right: 19px;
+    top: 19px;
+    content: '';
+    width: 12px;
+    height: 11px;
+    background-image: url(../csgopicture/sprites.png);
+    /* background-color: green; */
+    background-position: -82px -227px;
+}
+
+.saisi .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.saisi .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+
+.saisi .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.saisi .hd a,
+.maps .hd a ,
+.gun .hd a{
+    float: right;
+    color: #999;
+}
+
+.saisi .hd a::after,
+.maps .hd a::after,
+.gun .hd a::after {
+    display: inline-block;
+    content: '';
+    margin-left: 13px;
+    width: 7px;
+    height: 13px;
+    /* background-color: green; */
+    background-image: url(../csgopicture/sprites.png);
+    background-position: -7px -225px;
+    vertical-align: middle;
+}
+
+.saisi .bd li {
+    position: relative;
+    float: left;
+    width: 304px;
+    height: 660px;
+    margin-right: 8px;
+    background-color: #f0f9f4;
+    /* background-color: pink; */
+    text-align: center;
+}
+
+.saisi .bd li:last-child {
+    margin-right: 0;
+}
+
+.saisi .bd li img {
+    width: 304px;
+}
+
+.saisi .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.saisi .bd li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.saisi .bd li span {
+    font-size: 23px;
+}
+
+.saisi .bd li b {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.maps .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.maps .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+
+.maps .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.maps .bd li {
+    position: relative;
+    float: left;
+    width: 304px;
+    height: 450px;
+    margin-right: 8px;
+    background-color: #f0f9f4;
+    /* background-color: pink; */
+    text-align: center;
+}
+
+.maps .bd li:last-child {
+    margin-right: 0;
+}
+
+.maps .bd li img {
+    width: 304px;
+}
+
+.maps .bd li h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.maps .bd li div {
+    color: #9a2e1f;
+    font-size: 17px;
+}
+
+.maps .bd li span {
+    font-size: 23px;
+}
+
+.maps .bd li b {
+    position: absolute;
+    left: 17px;
+    top: 18px;
+    width: 28px;
+    height: 51px;
+    border: 1px solid #27ba9b;
+    border-radius: 2px;
+    font-size: 18px;
+    color: #27ba9b;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.gun .hd {
+    height: 114px;
+    /* background-color: pink; */
+    line-height: 114px;
+}
+
+.gun  .hd h2 {
+    float: left;
+    font-size: 29px;
+    font-weight: 400;
+    height: 114px;
+}
+
+.gun  .hd h2 span {
+    margin-left: 34px;
+    font-size: 16px;
+    color: #999;
+}
+
+.gun .content li {
+    float: left;
+    margin-right:15px ;
+    margin-bottom: 15px;
+    width: 228px;
+    height: 270px;
+    /* background-color: #fff; */
+    background-color: #f0f9f4;
+}
+
+.gun .content li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.gun .content li h3 {
+    padding: 20px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+
+.gun .content li p {
+    padding: 0 20px;
+    font-size: 12px;
+    color: #999;
+}
+
+.gun .content li p span {
+    color: #ff7c2d;
+}
+
+
+
+

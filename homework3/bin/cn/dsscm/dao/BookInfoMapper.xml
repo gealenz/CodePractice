@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.dsscm.dao.BookInfoMapper" >
+
+    <insert id="insertBookInfo" parameterType="cn.dsscm.pojo.BookInfo" >
+        <!-- 对应的 SQL 语句 -->
+        INSERT INTO book_info (bookCode, bookName, bookType, bookAuthor, publishPress, publishDate, borrowed, createdBy, createTime, lastUpdatetime) VALUES
+        ('2', 'Book2', 2, 'Author2', 'Press2', '2022-01-02', 0, 'User2', '2022-01-02', '2022-01-02'),
+        ('3', 'Book3', 1, 'Author3', 'Press3', '2022-01-03', 0, 'User3', '2022-01-03', '2022-01-03'),
+        ('4', 'Book4', 3, 'Author4', 'Press4', '2022-01-04', 0, 'User4', '2022-01-04', '2022-01-04');
+    </insert>
+    <insert id="insertBookType" parameterType="cn.dsscm.pojo.BookType" >
+            insert into book_type(id,typeName) values ('1','java'),('2','python');
+    </insert>
+    <delete id="deleteBookInfoById" parameterType="java.lang.Integer" >
+        <!-- 对应的 SQL 语句 -->
+        DELETE FROM book_type WHERE id = 2;
+    </delete>
+
+    <update id="updateBookInfo" parameterType="cn.dsscm.pojo.BookInfo" >
+        <!-- 对应的 SQL 语句 -->
+        UPDATE book_info SET bookId = 2, bookName = 'web' WHERE bookId = 2;
+    </update>
+
+    <select id="selectBookInfoById" parameterType="java.lang.Integer" resultType="cn.dsscm.pojo.BookInfo" >
+        <!-- 对应的 SQL 语句 -->
+        SELECT * FROM book_type WHERE id = 2;
+    </select>
+
+    <select id="selectAllBookInfos" resultType="cn.dsscm.pojo.BookInfo" >
+        <!-- 对应的 SQL 语句 -->
+        SELECT * FROM book_info;
+    </select>
+
+    <select id="selectBookInfoByPage" parameterType="map" resultType="cn.dsscm.pojo.BookInfo" >
+        <!-- 对应的 SQL 语句 -->
+        SELECT * FROM book_info LIMIT #{offset}, #{limit};
+    </select>
+
+    <select id="selectBookInfoWithBookTypeById" parameterType="java.lang.Integer" resultType="cn.dsscm.pojo.BookInfo" >
+        <!-- 对应的 SQL 语句 -->
+        SELECT * FROM book_type WHERE id = 2;
+    </select>
+
+</mapper>

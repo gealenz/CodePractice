@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.krowemohl.mapper.BookInfoMapper">
+
+    <resultMap id="bookWithTypeInfoResultMap" type="BookInfo">
+        <id property="bookId" column="bookId"/>
+        <!-- 其他字段映射 -->
+
+        <!-- 关联映射 -->
+        <association property="bookType" javaType="BookType">
+            <id property="id" column="id"/>
+            <result property="typeName" column="typeName"/>
+
+            <!-- BookType的其他字段映射 -->
+        </association>
+    </resultMap>
+    <insert id="insertBookInfo">
+        INSERT INTO book_info (bookCode, bookName, bookType, bookAuthor, publishPress, publishDate, borrowed, createdBy, createTime, lastUpdatetime) VALUES
+              ('2', 'Book2', 2, 'Author2', 'Press2', '2022-01-02', 0, 'User2', '2022-01-02', '2022-01-02'),
+              ('3', 'Book3', 1, 'Author3', 'Press3', '2022-01-03', 0, 'User3', '2022-01-03', '2022-01-03'),
+              ('4', 'Book4', 3, 'Author4', 'Press4', '2022-01-04', 0, 'User4', '2022-01-04', '2022-01-04');
+    </insert>
+
+    <insert id="insertBookType">
+        insert into book_type(id,typeName) values ('5','java5'),('6','python6');
+    </insert>
+
+    <update id="updateBookInfo">
+        UPDATE book_info SET bookId = 2, bookName = 'web' WHERE bookId = 2;
+    </update>
+
+    <delete id="deleteBookInfoById">
+        DELETE FROM book_type WHERE id = #{id};
+    </delete>
+
+    <select id="selectByBookType" resultType="com.krowemohl.pojo.BookInfo">
+        SELECT
+            *
+        FROM
+            book_info b
+                left JOIN
+            book_type t ON b.bookType = t.id
+        where t.id = #{bookTyple}
+    </select>
+
+    <select id="selectBookInfoWithTypeInfo" resultType="com.krowemohl.pojo.BookInfo">
+        SELECT
+            *
+        FROM
+            book_info b
+                left JOIN
+            book_type t ON b.bookType = t.id
+    </select>
+
+    <select id="selectBookInfoByPage" resultType="com.krowemohl.pojo.BookInfo">
+        SELECT * FROM book_info LIMIT #{offset}, #{limit};
+    </select>
+
+    <select id="selectBookInfoWithBookTypeById" resultType="com.krowemohl.pojo.BookInfo">
+        SELECT
+            *
+        FROM
+            book_info b
+                left JOIN
+            book_type t ON b.bookType = t.id
+        where t.id = #{bookTyple}
+    </select>
+
+
+</mapper>

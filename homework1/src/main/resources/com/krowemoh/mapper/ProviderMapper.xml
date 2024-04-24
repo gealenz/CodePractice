@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.krowemoh.mapper.ProviderMapper">
+
+
+
+    <!--    <select id="selectBlog" resultType="Provider">
+            select * from Blog where id = #{id}
+        </select>-->
+
+    <select id="selectAll" resultType="provider">
+        select * from tb_provider;
+    </select>
+
+<!--    供应商id、供应商编码、供应商名称、联系人、联系电话、传真、创建时间-->
+    <select id="selectByCondition" resultType="provider">
+        select *
+        from tb_provider
+        <where>
+            <if test="proCode != null || proCode != '' ">
+                and proCode like #{proCode}
+            </if>
+            <if test="proName != null || proName != '' ">
+                and proName like #{proName}
+            </if>
+        </where>
+    </select>
+
+
+    <update id="update">
+        update tb_provider
+        <set>
+            <if test="proCode != null || proCode != '' ">
+                proCode = #{proCode},
+            </if>
+            <if test="proName != null || proName != '' ">
+                proName = #{proName},
+            </if>
+            <if test="proDesc != null || proDesc != '' ">
+                proDesc = #{proDesc},
+            </if>
+            <if test="proContact != null || proContact != '' ">
+                proContact = #{proContact},
+            </if>
+            <if test="proPhone != null || proPhone != '' ">
+                proPhone = #{proPhone},
+            </if>
+            <if test="proAddress != null || proAddress != '' ">
+                proAddress = #{proAddress},
+            </if>
+            <if test="proFax != null || proFax != '' ">
+                proFax = #{proFax},
+            </if>
+            <if test="userId != null">
+                userId = #{userId},
+            </if>
+            <if test="creationDate != null || creationDate != '' ">
+                creationDate = #{creationDate},
+            </if>
+            <if test="modifyDate != null || modifyDate != '' ">
+                modifyDate = #{modifyDate},
+            </if>
+            <if test="modifyBy != null">
+                modifyBy = #{modifyBy},
+            </if>
+            <if test="companyLicPicPath != null || companyLicPicPath != '' ">
+                companyLicPicPath = #{companyLicPicPath},
+            </if>
+            <if test="orgCodePicPath != null || orgCodePicPath != '' ">
+                orgCodePicPath = #{orgCodePicPath},
+            </if>
+        </set>
+        where id = #{id};
+    </update>
+
+</mapper>

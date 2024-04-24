@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+    <!--别名-->
+    <typeAliases>
+        <package name="com.krowemohl.pojo"/>
+    </typeAliases>
+
+
+<!--
+    environments:配置数据库连接坏境信息。可以配置多个environment，通过default属性切换不同的数据库信息
+-->
+    <environments default="development">
+        <environment id="development">
+
+            <transactionManager type="JDBC"/>
+            <!--事务的管理信息-->
+
+            <dataSource type="POOLED">
+                <!--数据连接池-->
+
+                <!--数据库的连接信息-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql:///test01?useSSL=false"/>
+                <property name="username" value="root"/>
+                <property name="password" value="200264saber"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <package name="com.krowemohl.mapper"/>
+    </mappers>
+</configuration>

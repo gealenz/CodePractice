@@ -26,7 +26,13 @@
     </insert>
 
     <insert id="insertBookType">
+
         insert into book_type(id,typeName) values ('5','java5'),('6','python6');
+    </insert>
+
+    <insert id="insertBookInfo2">
+        insert into book_info(bookCode, bookName, bookType, bookAuthor, publishPress, publishDate, borrowed, createdBy, createTime, lastUpdatetime) values
+                ('#{bookCode}','#{bookCode}','#{bookType}','#{bookAuthor}','#{publishPress}','#{publishDate}','#{borrowed}','#{createdBy}','#{createTime}','#{lastUpdateTime}');
     </insert>
 
     <update id="updateBookInfo">

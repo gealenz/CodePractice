@@ -1,5 +1,3 @@
-package com.krowemoh.mapper;
-
 import com.krowemoh.pojo.Provider;
 import org.apache.ibatis.annotations.Param;
 

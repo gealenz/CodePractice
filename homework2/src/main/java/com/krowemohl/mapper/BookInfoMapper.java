@@ -9,6 +9,9 @@ import java.util.List;
 public interface BookInfoMapper {
 
     int insertBookInfo(BookInfo bookInfo);
+
+    int insertBookInfo2(BookInfo booknfo);
+
     int insertBookType(BookType bookType);
     int deleteBookInfoById(Integer bookId);
     int updateBookInfo(BookInfo bookInfo);

@@ -104,6 +104,25 @@ public class BookInfo {
         this.lastUpdateTime = lastUpdateTime;
     }
 
+    public void setAll(Integer bookId,String bookCode,String bookName,
+                       Integer bookType,String bookAuthor,String publishPress,
+                       String publishDate,Integer borrowed,String createdBy,
+                       Date createTime,Date lastUpdateTime) {
+
+        this.bookId = bookId;
+        this.bookCode = bookCode;
+        this.bookName = bookName;
+        this.bookType = bookType;
+        this.bookAuthor = bookAuthor;
+        this.publishPress = publishPress;
+        this.publishDate = publishDate;
+        this.borrowed = borrowed;
+        this.createdBy = createdBy;
+        this.createTime = createTime;
+        this.lastUpdateTime = lastUpdateTime;
+
+    }
+
     @Override
     public String toString() {
         return "BookInfo{" +

@@ -25,9 +25,9 @@
 
                 <!--数据库的连接信息-->
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql:///test01?useSSL=false"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/test01?useSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="200264saber"/>
+                <property name="password" value="200264Saber!"/>
             </dataSource>
         </environment>
     </environments>

@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 
 
 int** Lcs_Lenght(const char* str1,const char* str2,int str1_length,int str2_length){
@@ -19,7 +20,7 @@ int** Lcs_Lenght(const char* str1,const char* str2,int str1_length,int str2_leng
     }
     for(i = 1;i <= str1_length;i++){
         for (j = 1;j <= str1_length;j++){
-            if(str[i - 1] == str2[j - 1]){
+            if(str1[i - 1] == str2[j - 1]){
                 l[i][j] = l[i - 1][j = 1];
                 b[i][j] = 0;                    /*0代表右上方的箭头*/
             }else if (l[i - 1][j] >= l[i][j - 1]){
